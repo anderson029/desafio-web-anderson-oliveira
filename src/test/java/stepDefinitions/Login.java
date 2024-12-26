@@ -19,7 +19,8 @@ public class Login {
   }
   @Quando("insiro o usuário {string} e a senha {string}")
   public void enterCredentials(String user, String password) {
-    homePage = loginPage.formLogin(user, password);
+    loginPage.formLogin(user, password);
+    homePage = loginPage.getDriver();
   }
   @Entao("devo ver home de produtos")
   public void verifyProductHomepage() {

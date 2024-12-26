@@ -15,6 +15,10 @@ public class HomePage {
   private By bike = By.id("add-to-cart-sauce-labs-bike-light");
   private By cartBadge = By.cssSelector("#shopping_cart_container .shopping_cart_link");
 
+  public PaymentPage getDriver() {
+    return new PaymentPage(driver);
+  }
+
   public HomePage(WebDriver driver) {
     this.driver = driver;
   }

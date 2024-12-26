@@ -13,13 +13,11 @@ public class Cart {
   private HomePage homePage;
   private int quantityItem;
 
-  public Cart() {
-  }
-
   @Dado("que estou logado na home Swag Labs")
   public void loggedInOnSwagLabsHomePage() {
     loginPage = new LoginPage();
-    homePage = loginPage.formLogin("standard_user", "secret_sauce");
+    loginPage.formLogin("standard_user", "secret_sauce");
+    homePage = loginPage.getDriver();
   }
 
   @Quando("acesso a página de produtos adicionando itens ao carrinho")

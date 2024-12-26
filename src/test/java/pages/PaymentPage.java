@@ -23,8 +23,8 @@ public class PaymentPage {
     this.driver = WebDriverConfig.getDriver();
   }
 
-  public WebDriver getDriver() {
-    return driver;
+  public PaymentPage(WebDriver driver) {
+    this.driver = driver;
   }
 
   public String proceedToPayment(){

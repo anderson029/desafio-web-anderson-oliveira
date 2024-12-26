@@ -21,20 +21,22 @@ public class Payment {
   @Dado("que estou logado na home")
   public void que_estou_logado_na_home() {
     loginPage = new LoginPage();
-    homePage = loginPage.formLogin("standard_user","secret_sauce");
+    loginPage.formLogin("standard_user","secret_sauce");
+    homePage = loginPage.getDriver();
+
   }
   @Dado("adicino itens ao carrinho")
   public void adicino_itens_ao_carrinho() {
     homePage.addItems();
+    paymentPage = homePage.getDriver();
   }
 
   @Quando("realizo o pagamento")
   public void realizo_o_pagamento() {
-    paymentPage.getDriver();
     orderConfirmation = paymentPage.proceedToPayment();
   }
   @Entao("vejo a mensagem de confirmação {string}")
   public void vejo_a_mensagem_de_confirmação(String string) {
-//    assertEquals("Texto de confirmação não corresponde", "Thank you for your order!", orderConfirmation);
+    assertEquals("Thank you for your order!", orderConfirmation);
   }
 }
