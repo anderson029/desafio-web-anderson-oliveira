@@ -30,9 +30,8 @@ public class LoginPage {
     driver.findElement(loginButton).click();
   }
   public Boolean isTitleCorrect(){
-      WebElement titleElement = driver.findElement(titleLocator);
-      String titleText = titleElement.getText();
-      return titleText.equals("Products");
+    String titleText = driver.findElement(titleLocator).getText();
+    return titleText.equals("Products");
   }
 
   public Boolean isErrorMessageDisplayed(String expectedMessage) {
