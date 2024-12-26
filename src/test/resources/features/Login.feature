@@ -5,14 +5,15 @@ Funcionalidade: Login de usuário
   Quero realizar login
   Para visualizar os produtos disponíveis
 
-Cenário: Login com credenciais válidas
+Contexto:
   Dado que estou na página de login da Swag Labs
+
+Cenário: Login com credenciais válidas
   Quando insiro o usuário "standard_user" e a senha "secret_sauce"
   Então devo ver home de produtos
   E realizo o logout
 
 Esquema do Cenario: Login com credenciais incorretas
-  Dado que estou na página de login da Swag Labs
   Quando insiro o usuário "<username>" e a senha "<password>"
   Então devo ver a mensagem "<message>" de erro
 
