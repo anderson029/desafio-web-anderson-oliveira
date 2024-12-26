@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utils.WebDriverConfig;
 
 public class LoginPage {
   private WebDriver driver;
@@ -13,8 +14,8 @@ public class LoginPage {
 
   private By titleLocator = By.cssSelector("[data-test='title']");
 
-  public LoginPage(WebDriver driver) {
-    this.driver = driver;
+  public LoginPage() {
+    this.driver = WebDriverConfig.getDriver();
   }
 
   public void formLogin(String user, String password) {
@@ -24,16 +25,9 @@ public class LoginPage {
 
   }
 
-  public Boolean validatePage(){
-    //TODO CONTINUAR VALIDAÇÃO DAQUI
-//    return driver.findElement(titleLocator).getText().equals("Anderson");
+  public Boolean isTitleCorrect(){
       WebElement titleElement = driver.findElement(titleLocator);
-      if (titleElement.isDisplayed()) {
-        String titleText = titleElement.getText();
-        return titleText.equals("xpto");
-      } else {
-        System.out.println("Elemento não visível!");
-        return false;
-      }
+      String titleText = titleElement.getText();
+      return titleText.equals("Products");
   }
 }
