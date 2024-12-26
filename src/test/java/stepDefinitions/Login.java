@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import hooks.DriverHooks;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
 import io.cucumber.java.pt.Entao;
@@ -8,7 +9,7 @@ import pages.LoginPage;
 
 import static org.junit.Assert.assertTrue;
 
-public class LoginSteps {
+public class Login {
   private LoginPage loginPage;
   private HomePage homePage;
 
