@@ -25,10 +25,14 @@ public class HomePage {
     wait.until(ExpectedConditions.elementToBeClickable(logout)).click();
   }
 
-  public int addItems(){
+  public void addItems(){
     driver.findElement(backpack).click();
     driver.findElement(bike).click();
+    driver.findElement(cartBadge).click();
+  }
 
+  public int quantityItemCart(){
+    addItems();
     String badgeText = driver.findElement(cartBadge).getText();
     return Integer.parseInt(badgeText);
   }

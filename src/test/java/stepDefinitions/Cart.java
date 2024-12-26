@@ -11,7 +11,7 @@ public class Cart {
 
   private LoginPage loginPage;
   private HomePage homePage;
-  private int itemCart;
+  private int quantityItem;
 
   public Cart() {
   }
@@ -24,11 +24,11 @@ public class Cart {
 
   @Quando("acesso a página de produtos adicionando itens ao carrinho")
   public void accessProductPageAndAddItemsToCart() {
-     itemCart = homePage.addItems();
+    quantityItem = homePage.quantityItemCart();
   }
 
   @Entao("vejo os itens adicionados no carrinho")
   public void verifyItemsAddedToCart() {
-    Assert.assertEquals("O carrinho não contém o número esperado de itens.", 2, itemCart);
+    Assert.assertEquals("O carrinho não contém o número esperado de itens.", 2, quantityItem);
   }
 }
