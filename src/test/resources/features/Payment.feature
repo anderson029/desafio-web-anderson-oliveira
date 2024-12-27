@@ -1,5 +1,6 @@
 #language: pt
 
+  @Smoke
   Funcionalidade: Fazer pagamento com itens escolhidos
     Eu como usuário do e-commerce
     Quero realizar pagamento dos itens do carrinho

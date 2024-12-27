@@ -1,5 +1,6 @@
 #language: pt
 
+@Smoke
 Funcionalidade: Login de usuário
   Eu como usuário do e-commerce
   Quero realizar login

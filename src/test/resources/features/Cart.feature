@@ -1,5 +1,6 @@
 #language: pt
 
+  @Smoke
   Funcionalidade: Adicionar itens ao carrinho
     Eu como usuário
     Quero adicinoar itens ao carrinho
