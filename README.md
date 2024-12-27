@@ -40,4 +40,5 @@ ___________________IntelliJ IDEA___________________
 As capturas de tela geradas durante a execução da automação são armazenadas na pasta `screenshots`.
 
 ## 📊 Reports - (em desenvolvimento)
-Os relatórios de teste do Cucumber serão gerados automaticamente na pasta target/cucumber-reports.
+ 1. Os relatórios de teste do Cucumber serão gerados automaticamente na pasta target/cucumber-reports.
+ 2. Logs da aplicação serão gerados automaticamente na pasta target/test-logs.
