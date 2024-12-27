@@ -36,6 +36,8 @@ ___________________IntelliJ IDEA___________________
 3. O IntelliJ irá detectar automaticamente o projeto Maven e baixar as dependências.
 4. Para rodar os testes, clique com o botão direito na classe de teste ou no arquivo .feature do Cucumber e selecione Run.
 
+## 📸 Capturas de Tela
+As capturas de tela geradas durante a execução da automação são armazenadas na pasta `screenshots`.
 
 ## 📊 Reports - (em desenvolvimento)
 Os relatórios de teste do Cucumber serão gerados automaticamente na pasta target/cucumber-reports.
