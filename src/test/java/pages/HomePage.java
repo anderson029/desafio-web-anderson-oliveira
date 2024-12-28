@@ -23,19 +23,19 @@ public class HomePage {
     this.driver = driver;
   }
 
-  public void logout(){
+  public void logout() {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     wait.until(ExpectedConditions.elementToBeClickable(submenu)).click();
     wait.until(ExpectedConditions.elementToBeClickable(logout)).click();
   }
 
-  public void addItems(){
+  public void addItems() {
     driver.findElement(backpack).click();
     driver.findElement(bike).click();
     driver.findElement(cartBadge).click();
   }
 
-  public int quantityItemCart(){
+  public int quantityItemCart() {
     addItems();
     String badgeText = driver.findElement(cartBadge).getText();
     return Integer.parseInt(badgeText);

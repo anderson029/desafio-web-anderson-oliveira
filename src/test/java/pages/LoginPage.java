@@ -29,7 +29,7 @@ public class LoginPage {
     driver.findElement(passwordField).sendKeys(password);
     driver.findElement(loginButton).click();
   }
-  public Boolean isTitleCorrect(){
+  public Boolean isTitleCorrect() {
     String titleText = driver.findElement(titleLocator).getText();
     return titleText.equals("Products");
   }

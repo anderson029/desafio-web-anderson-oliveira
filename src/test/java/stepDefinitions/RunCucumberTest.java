@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         tags = "@Smoke"
 )
+
 public class RunCucumberTest {
 
 }

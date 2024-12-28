@@ -27,14 +27,13 @@ public class PaymentPage {
     this.driver = driver;
   }
 
-  public String proceedToPayment(){
+  public String proceedToPayment() {
     driver.findElement(checkout).click();
     driver.findElement(firstName).sendKeys(faker.name().firstName());
     driver.findElement(lastName).sendKeys(faker.name().lastName());
     driver.findElement(zipCode).sendKeys(faker.address().zipCode());
     driver.findElement(continueId).click();
     driver.findElement(finish).click();
-
     return driver.findElement(completeHeader).getText();
   }
 }

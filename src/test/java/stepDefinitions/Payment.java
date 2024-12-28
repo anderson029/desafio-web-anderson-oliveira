@@ -27,6 +27,7 @@ public class Payment {
     loginPage.formLogin("standard_user","secret_sauce");
     homePage = loginPage.getDriver();
   }
+
   @Dado("adicino itens ao carrinho")
   public void adicino_itens_ao_carrinho() {
     log.info("Iniciando step de pagamento para fechar pagamento");
@@ -41,8 +42,8 @@ public class Payment {
   }
 
   @Entao("vejo a mensagem de confirmação {string}")
-  public void vejo_a_mensagem_de_confirmação(String string) {
+  public void vejo_a_mensagem_de_confirmação(String message) {
     log.info("Confirmação do pedido");
-    assertEquals("Thank you for your order!", orderConfirmation);
+    assertEquals(message, orderConfirmation);
   }
 }
