@@ -10,11 +10,11 @@ public class LoginPage {
   private WebDriver driver;
 
   private By userField = By.id("user-name");
+
   private By passwordField = By.id("password");
   private By loginButton = By.id("login-button");
   private By titleLocator = By.cssSelector("[data-test='title']");
   private By errorMessage = By.xpath("//h3[@data-test='error']");
-
 
   public LoginPage() {
     this.driver = WebDriverConfig.getDriver();

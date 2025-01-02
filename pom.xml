@@ -23,7 +23,7 @@
 
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
+            <artifactId>cucumber-junit-platform-engine</artifactId> <!-- Dependência necessária para JUnit 5 -->
             <version>7.20.1</version>
             <scope>test</scope>
         </dependency>
@@ -38,6 +38,13 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>1.11.4</version>
             <scope>test</scope>
         </dependency>
 
@@ -87,9 +94,16 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+                    <useModulePath>false</useModulePath>
                     <includes>
-                        <include>**/RunCucumberTest.java</include>
+                        <include>**/RunCucumberTest.java</include> <!-- Certifique-se de que está correto -->
                     </includes>
+                    <properties>
+                        <property>
+                            <name>junit.platform.version</name>
+                            <value>1.11.4</value> <!-- Necessário para o JUnit 5 -->
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
         </plugins>
