@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.WebDriverConfig;
 
 @Slf4j
 public class Login {
@@ -36,6 +37,7 @@ public class Login {
   public void logout() {
     log.info("Realizando logout");
     homePage.logout();
+//    WebDriverConfig.closeDriver();
   }
 
   @Entao("devo ver a mensagem {string} de erro")
@@ -43,5 +45,6 @@ public class Login {
     log.info("Validando mensagem de erro.");
     Boolean isMessageCorrect = loginPage.isErrorMessageDisplayed(expectedMessage);
     Assertions.assertTrue(isMessageCorrect, "A mensagem de erro exibida está incorreta.");
+//    WebDriverConfig.closeDriver();
   }
 }

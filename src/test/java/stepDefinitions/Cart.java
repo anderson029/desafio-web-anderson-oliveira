@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import hooks.DriverHooks;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -7,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import pages.HomePage;
 import pages.LoginPage;
+
 
 @Slf4j
 public class Cart {
@@ -33,6 +35,5 @@ public class Cart {
   public void verifyItemsAddedToCart() {
     log.info("Validando quantidade de itens no carrinho.");
     Assertions.assertEquals(2, quantityItem, "O carrinho não contém o número esperado de itens.");
-
   }
 }

@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.PaymentPage;
+import utils.WebDriverConfig;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -45,5 +46,6 @@ public class Payment {
   public void vejo_a_mensagem_de_confirmação(String message) {
     log.info("Confirmação do pedido");
     assertEquals(message, orderConfirmation);
+//    WebDriverConfig.closeDriver();
   }
 }
