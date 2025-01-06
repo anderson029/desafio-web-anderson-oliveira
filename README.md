@@ -34,7 +34,7 @@ ___________________IntelliJ IDEA___________________
 1. Abra o IntelliJ IDEA.
 2. Selecione "Open" e escolha a pasta do projeto.
 3. O IntelliJ irá detectar automaticamente o projeto Maven e baixar as dependências.
-4. Para rodar os testes, clique com o botão direito na classe de teste ou no arquivo .feature do Cucumber e selecione Run.
+4. Para rodar os testes, clique com o botão direito na classe de teste ou no arquivo .feature do Cucumber e selecione Run ou executar a class RunCucumberTest para rodar todas as features.
 
 ## 📸 Capturas de Tela
 As capturas de tela geradas durante a execução da automação são armazenadas na pasta `screenshots`.
